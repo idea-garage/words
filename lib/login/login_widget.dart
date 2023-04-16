@@ -778,7 +778,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                                 return;
                                                                               }
 
-                                                                              context.goNamedAuth('homePage', mounted);
+                                                                              context.goNamedAuth('Login', mounted);
                                                                             },
                                                                             text:
                                                                                 'Continue with Apple',
@@ -1265,7 +1265,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                   }
 
                                                                   context.goNamedAuth(
-                                                                      'homePage',
+                                                                      'Login',
                                                                       mounted);
                                                                 },
                                                                 text:
@@ -1347,7 +1347,7 @@ class _LoginWidgetState extends State<LoginWidget>
                                                                         }
 
                                                                         context.goNamedAuth(
-                                                                            'homePage',
+                                                                            'Login',
                                                                             mounted);
                                                                       },
                                                                       text:
@@ -1432,7 +1432,7 @@ class _LoginWidgetState extends State<LoginWidget>
 
                                                               context
                                                                   .goNamedAuth(
-                                                                      'homePage',
+                                                                      'Login',
                                                                       mounted);
                                                             },
                                                             text:

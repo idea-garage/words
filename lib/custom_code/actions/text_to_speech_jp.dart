@@ -19,5 +19,6 @@ Future textToSpeechJp(String input) async {
   await flutterTts.setLanguage("ja-JP");
   await flutterTts.setPitch(0.9);
   await flutterTts.setSpeechRate(0.8);
+  await flutterTts.isLanguageAvailable("ja-JP");
   await flutterTts.speak(input);
 }

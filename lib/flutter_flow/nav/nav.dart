@@ -69,48 +69,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) =>
-          appStateNotifier.loggedIn ? NavBarPage() : IndexWidget(),
+          appStateNotifier.loggedIn ? LoginWidget() : IndexWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) =>
-              appStateNotifier.loggedIn ? NavBarPage() : IndexWidget(),
+              appStateNotifier.loggedIn ? LoginWidget() : IndexWidget(),
           routes: [
-            FFRoute(
-              name: 'createProfile',
-              path: 'createProfile',
-              builder: (context, params) => CreateProfileWidget(),
-            ),
-            FFRoute(
-              name: 'forgotPassword',
-              path: 'forgotPassword',
-              builder: (context, params) => ForgotPasswordWidget(),
-            ),
-            FFRoute(
-              name: 'signIn',
-              path: 'signIn',
-              builder: (context, params) => SignInWidget(),
-            ),
-            FFRoute(
-              name: 'homePage',
-              path: 'homePage',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'homePage')
-                  : HomePageWidget(),
-            ),
-            FFRoute(
-              name: 'Vector',
-              path: 'vector',
-              builder: (context, params) => VectorWidget(),
-            ),
-            FFRoute(
-              name: 'profilePage',
-              path: 'profilePage',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'profilePage')
-                  : ProfilePageWidget(),
-            ),
             FFRoute(
               name: 'Index',
               path: 'index',
@@ -125,11 +91,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'Login',
               path: 'login',
               builder: (context, params) => LoginWidget(),
-            ),
-            FFRoute(
-              name: 'Management',
-              path: 'management',
-              builder: (context, params) => ManagementWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
