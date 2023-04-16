@@ -1,4 +1,5 @@
 import '/backend/supabase/supabase.dart';
+import '/components/information_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';

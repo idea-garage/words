@@ -112,34 +112,9 @@ flutter:
     - assets/rive_animations/
     - assets/pdfs/
   fonts:
-    - family: 'NotoSansJP'
-      fonts:
-        - asset: assets/fonts/NotoSansJP-Thin.otf
-          weight: 100
-        - asset: assets/fonts/NotoSansJP-Light.otf
-          weight: 300
-        - asset: assets/fonts/NotoSansJP-Regular.otf
-        - asset: assets/fonts/NotoSansJP-Medium.otf
-          weight: 500
-        - asset: assets/fonts/NotoSansJP-Bold.otf
-          weight: 700
-        - asset: assets/fonts/NotoSansJP-Black.otf
-          weight: 900
     - family: 'NotoSerifJP'
       fonts:
-        - asset: assets/fonts/NotoSerifJP-ExtraLight.otf
-          weight: 200
-        - asset: assets/fonts/NotoSerifJP-Light.otf
-          weight: 300
         - asset: assets/fonts/NotoSerifJP-Regular.otf
-        - asset: assets/fonts/NotoSerifJP-Medium.otf
-          weight: 500
-        - asset: assets/fonts/NotoSerifJP-SemiBold.otf
-          weight: 600
-        - asset: assets/fonts/NotoSerifJP-Bold.otf
-          weight: 700
-        - asset: assets/fonts/NotoSerifJP-Black.otf
-          weight: 900
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

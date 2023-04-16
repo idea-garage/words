@@ -12,13 +12,21 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 FlutterTts flutterTts = FlutterTts();
 
-Future textToSpeech(String input) async {
+Future textToSpeech(BuildContext context, String input) async {
   // text input ToSpeech
+  var lang = await flutterTts.getLanguages;
 
-  print(input);
-  await flutterTts.setLanguage("en-US");
-  await flutterTts.setPitch(0.6);
-  await flutterTts.setSpeechRate(1);
-  await flutterTts.isLanguageAvailable("en-US");
-  await flutterTts.speak(input);
+  if (lang.contains('en-US')) {
+    print(input);
+    await flutterTts.setLanguage("en-US");
+    await flutterTts.setPitch(1);
+    await flutterTts.setSpeechRate(1);
+    await flutterTts.isLanguageAvailable("en-US");
+    await flutterTts.speak(input);
+  } else {
+    var snackBar = SnackBar(
+      content: Text('TTS languages do not contain en-US' + lang.toString()),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
 }

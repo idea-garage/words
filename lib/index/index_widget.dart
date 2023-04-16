@@ -1,4 +1,5 @@
 import '/backend/supabase/supabase.dart';
+import '/components/information_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -183,103 +184,84 @@ class _IndexWidgetState extends State<IndexWidget>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Expanded(
-                    child: Container(
-                      width: double.infinity,
-                      height: 500.0,
-                      constraints: BoxConstraints(
-                        maxWidth: 500.0,
-                      ),
-                      decoration: BoxDecoration(),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 3,
-                            child: Container(
-                              width: double.infinity,
-                              height: double.infinity,
-                              constraints: BoxConstraints(
-                                maxWidth: 800.0,
-                              ),
-                              decoration: BoxDecoration(),
-                              child: FlipCard(
-                                fill: Fill.fillBack,
-                                direction: FlipDirection.HORIZONTAL,
-                                speed: 800,
-                                front: Container(
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      Spacer(),
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Padding(
+                    child: Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                      child: Container(
+                        width: double.infinity,
+                        height: 500.0,
+                        constraints: BoxConstraints(
+                          maxWidth: 500.0,
+                        ),
+                        decoration: BoxDecoration(),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              flex: 3,
+                              child: Container(
+                                width: double.infinity,
+                                height: double.infinity,
+                                constraints: BoxConstraints(
+                                  maxWidth: 800.0,
+                                ),
+                                decoration: BoxDecoration(),
+                                child: FlipCard(
+                                  fill: Fill.fillBack,
+                                  direction: FlipDirection.HORIZONTAL,
+                                  speed: 800,
+                                  front: Container(
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Spacer(),
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 32.0, 0.0, 32.0),
+                                            child: Text(
+                                              valueOrDefault<String>(
+                                                getJsonField(
+                                                  _model.word,
+                                                  r'''$.word''',
+                                                ).toString(),
+                                                '明鏡止水',
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .displayLarge
+                                                  .override(
+                                                    fontFamily: 'NotoSerifJP',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    letterSpacing: 5.0,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 32.0, 0.0, 32.0),
+                                                  0.0, 0.0, 0.0, 32.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               getJsonField(
                                                 _model.word,
-                                                r'''$.word''',
-                                              ).toString(),
-                                              '明鏡止水',
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .displayLarge
-                                                .override(
-                                                  fontFamily: 'NotoSerifJP',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  letterSpacing: 5.0,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 32.0),
-                                        child: Text(
-                                          valueOrDefault<String>(
-                                            getJsonField(
-                                              _model.word,
-                                              r'''$.word_en''',
-                                            ).toString(),
-                                            'meikyosisui',
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineSmall
-                                              .override(
-                                                fontFamily: 'NotoSerifJP',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                fontSize: 18.0,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                      ),
-                                      Spacer(),
-                                      Column(
-                                        mainAxisSize: MainAxisSize.max,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        children: [
-                                          Text(
-                                            valueOrDefault<String>(
-                                              getJsonField(
-                                                _model.word,
-                                                r'''$.summary_en''',
+                                                r'''$.word_en''',
                                               ).toString(),
                                               'meikyosisui',
                                             ),
@@ -289,82 +271,111 @@ class _IndexWidgetState extends State<IndexWidget>
                                                   fontFamily: 'NotoSerifJP',
                                                   color: FlutterFlowTheme.of(
                                                           context)
-                                                      .secondaryText,
-                                                  fontSize: 16.0,
+                                                      .primaryText,
+                                                  fontSize: 18.0,
                                                   useGoogleFonts: false,
                                                 ),
                                           ),
-                                        ],
-                                      ),
-                                      Spacer(),
-                                    ],
+                                        ),
+                                        Spacer(),
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          children: [
+                                            Text(
+                                              valueOrDefault<String>(
+                                                getJsonField(
+                                                  _model.word,
+                                                  r'''$.summary_en''',
+                                                ).toString(),
+                                                'meikyosisui',
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .headlineSmall
+                                                  .override(
+                                                    fontFamily: 'NotoSerifJP',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryText,
+                                                    fontSize: 16.0,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                            ),
+                                          ],
+                                        ),
+                                        Spacer(),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                back: Container(
-                                  width: double.infinity,
-                                  height: 300.0,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(12.0),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
-                                        child: Padding(
+                                  back: Container(
+                                    width: double.infinity,
+                                    height: 300.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Align(
+                                          alignment:
+                                              AlignmentDirectional(0.0, 0.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 32.0, 0.0, 32.0),
+                                            child: Text(
+                                              valueOrDefault<String>(
+                                                getJsonField(
+                                                  _model.word,
+                                                  r'''$.word''',
+                                                ).toString(),
+                                                '明鏡止水',
+                                              ),
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .displayLarge
+                                                  .override(
+                                                    fontFamily: 'NotoSerifJP',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .primaryText,
+                                                    fontSize: 32.0,
+                                                    letterSpacing: 5.0,
+                                                    fontWeight:
+                                                        FontWeight.normal,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 32.0, 0.0, 32.0),
+                                                  0.0, 0.0, 0.0, 32.0),
                                           child: Text(
                                             valueOrDefault<String>(
                                               getJsonField(
                                                 _model.word,
-                                                r'''$.word''',
+                                                r'''$.pronunce_jp''',
                                               ).toString(),
-                                              '明鏡止水',
+                                              'Pure and calm',
                                             ),
                                             style: FlutterFlowTheme.of(context)
-                                                .displayLarge
+                                                .headlineSmall
                                                 .override(
                                                   fontFamily: 'NotoSerifJP',
                                                   color: FlutterFlowTheme.of(
                                                           context)
-                                                      .primaryText,
-                                                  fontSize: 32.0,
-                                                  letterSpacing: 5.0,
+                                                      .secondaryText,
                                                   useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 32.0),
-                                        child: Text(
-                                          valueOrDefault<String>(
-                                            getJsonField(
-                                              _model.word,
-                                              r'''$.pronunce_jp''',
-                                            ).toString(),
-                                            'Pure and calm',
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .headlineSmall
-                                              .override(
-                                                fontFamily: 'NotoSerifJP',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 32.0),
-                                        child: Text(
+                                        Text(
                                           valueOrDefault<String>(
                                             getJsonField(
                                               _model.word,
@@ -382,46 +393,51 @@ class _IndexWidgetState extends State<IndexWidget>
                                                 useGoogleFonts: false,
                                               ),
                                         ),
-                                      ),
-                                      FlutterFlowIconButton(
-                                        borderColor:
-                                            FlutterFlowTheme.of(context)
-                                                .maximumBlueGreen,
-                                        borderRadius: 30.0,
-                                        borderWidth: 3.0,
-                                        buttonSize: 60.0,
-                                        icon: Icon(
-                                          Icons.record_voice_over,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                          size: 30.0,
-                                        ),
-                                        onPressed: () async {
-                                          await actions.textToSpeechJp(
-                                            getJsonField(
-                                              _model.word,
-                                              r'''$.word''',
-                                            ).toString(),
-                                          );
-                                          await Future.delayed(const Duration(
-                                              milliseconds: 1000));
-                                          await Future.delayed(const Duration(
-                                              milliseconds: 500));
-                                          await actions.textToSpeech(
-                                            valueOrDefault<String>(
-                                              getJsonField(
-                                                _model.word,
-                                                r'''$.desc_en''',
-                                              ).toString(),
-                                              'Pure and calm',
+                                        Padding(
+                                          padding:
+                                              EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 24.0, 0.0, 24.0),
+                                          child: FlutterFlowIconButton(
+                                            borderColor:
+                                                FlutterFlowTheme.of(context)
+                                                    .maximumBlueGreen,
+                                            borderRadius: 30.0,
+                                            borderWidth: 3.0,
+                                            buttonSize: 60.0,
+                                            icon: Icon(
+                                              Icons.record_voice_over,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              size: 30.0,
                                             ),
-                                          );
-                                        },
-                                      ),
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 8.0, 0.0, 0.0),
-                                        child: Container(
+                                            onPressed: () async {
+                                              await actions.textToSpeechJp(
+                                                getJsonField(
+                                                  _model.word,
+                                                  r'''$.word''',
+                                                ).toString(),
+                                              );
+                                              await Future.delayed(
+                                                  const Duration(
+                                                      milliseconds: 1000));
+                                              await Future.delayed(
+                                                  const Duration(
+                                                      milliseconds: 500));
+                                              await actions.textToSpeech(
+                                                context,
+                                                valueOrDefault<String>(
+                                                  getJsonField(
+                                                    _model.word,
+                                                    r'''$.desc_en''',
+                                                  ).toString(),
+                                                  'Pure and calm',
+                                                ),
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                        Container(
                                           decoration: BoxDecoration(),
                                           alignment:
                                               AlignmentDirectional(0.0, 0.0),
@@ -461,17 +477,17 @@ class _IndexWidgetState extends State<IndexWidget>
                                             ),
                                           ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
+                              ).animateOnActionTrigger(
+                                animationsMap[
+                                    'containerOnActionTriggerAnimation1']!,
                               ),
-                            ).animateOnActionTrigger(
-                              animationsMap[
-                                  'containerOnActionTriggerAnimation1']!,
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -703,8 +719,39 @@ class _IndexWidgetState extends State<IndexWidget>
                     Expanded(
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          FlutterFlowIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 30.0,
+                            borderWidth: 1.0,
+                            buttonSize: 40.0,
+                            fillColor: Color(0x25384A57),
+                            icon: Icon(
+                              Icons.info,
+                              color: FlutterFlowTheme.of(context).lineColor,
+                              size: 20.0,
+                            ),
+                            onPressed: () async {
+                              await showModalBottomSheet(
+                                isScrollControlled: true,
+                                backgroundColor: Colors.transparent,
+                                enableDrag: false,
+                                context: context,
+                                builder: (bottomSheetContext) {
+                                  return GestureDetector(
+                                    onTap: () => FocusScope.of(context)
+                                        .requestFocus(_unfocusNode),
+                                    child: Padding(
+                                      padding: MediaQuery.of(bottomSheetContext)
+                                          .viewInsets,
+                                      child: InformationWidget(),
+                                    ),
+                                  );
+                                },
+                              ).then((value) => setState(() {}));
+                            },
+                          ),
                           FlutterFlowIconButton(
                             borderColor: Colors.transparent,
                             borderRadius: 30.0,
