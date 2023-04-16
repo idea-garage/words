@@ -10,6 +10,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
@@ -192,7 +193,7 @@ class _IndexWidgetState extends State<IndexWidget>
                         Expanded(
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
@@ -203,14 +204,15 @@ class _IndexWidgetState extends State<IndexWidget>
                                   borderWidth: 1.0,
                                   buttonSize: 40.0,
                                   fillColor: Color(0x25384A57),
-                                  icon: Icon(
-                                    Icons.ios_share,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryBackground,
+                                  icon: FaIcon(
+                                    FontAwesomeIcons.twitter,
+                                    color:
+                                        FlutterFlowTheme.of(context).lineColor,
                                     size: 20.0,
                                   ),
-                                  onPressed: () {
-                                    print('IconButton pressed ...');
+                                  onPressed: () async {
+                                    await launchURL(
+                                        'https://twitter.com/share?text=日本の四字熟語の意味をAIが英語で解説するミニアプリを見つけました。I found a mini app that AI explains the meaning of Japanese four-character idioms in English.&url=https://words.flutterflow.app/');
                                   },
                                 ),
                               ),
