@@ -15,6 +15,9 @@ Future<dynamic> getRandomWord() async {
     // return random row of supabase table "words"
     final supabase = Supabase.instance.client;
     var mood = FFAppState().mood ?? 'Happy';
+    if (mood == '') {
+      mood = 'Happy';
+    }
 
     var result = await supabase
         .from('words_random')

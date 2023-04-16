@@ -91,7 +91,7 @@ class FFAppState extends ChangeNotifier {
     _currentUser = _value;
   }
 
-  String _mood = '';
+  String _mood = 'Happy';
   String get mood => _mood;
   set mood(String _value) {
     _mood = _value;
